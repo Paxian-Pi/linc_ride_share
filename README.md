@@ -11,3 +11,5 @@ App Instructions:
 3. Wait for "driver to pickup" simulation to complete (App automatically routes to the "RiderIsArriving" screen)
 4. Notice the Countdown Timer
 5. Now slide right to begin "pickup to destination" simulation
+6. Wait for simulation to finish (App automatically routes to the "TripEnded" screen)
+7. Click on close button on the to left corner of the screen to reset
