@@ -193,7 +193,7 @@ fun GoogleMapView(
 }
 
 suspend fun fetchRoute(origin: LatLng, destination: LatLng): List<LatLng> {
-    val apiKey = "AIzaSyABnJpIWnk-pj59pF7BhqripbZpEFX7E3M"
+    val apiKey = "YOU_API_KEY_HERE"
     val url =
         "https://maps.googleapis.com/maps/api/directions/json?origin=${origin.latitude},${origin.longitude}&destination=${destination.latitude},${destination.longitude}&key=$apiKey"
 

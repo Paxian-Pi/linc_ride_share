@@ -16,7 +16,7 @@
         android:theme="@style/Theme.LincRideshare">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyABnJpIWnk-pj59pF7BhqripbZpEFX7E3M" />
+            android:value="YOU_API_KEY_HERE" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
