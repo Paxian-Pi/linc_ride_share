@@ -1,6 +1,6 @@
 APK File Link: https://drive.google.com/file/d/1AqmQuzprJN2wHNjOFa1pEaCiiElihBK6/view?usp=sharing
-Build Instructions:
 
+Build Instructions:
 1. Clone the repository
 2. Sync the Gradle
 3. Connect you device and run the app
