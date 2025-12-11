@@ -168,23 +168,7 @@ fun RiderIsArrivingScreen(
                                         style = TextStyle(fontSize = 19.sp, fontWeight = FontWeight.W500)
                                     )
                                     
-                                    CountdownTimer(totalTime = 300) { }
-//                                    Column(horizontalAlignment = Alignment.End) {
-//
-//
-//                                        timerViewModel?.startTimer()
-//
-//                                        // Safely handle the timeLeft value and ensure it is displayed as a string
-//                                        val timeLeftText = timerViewModel?.timeLeft?.collectAsState()?.value?.let {
-//                                            if (it > 0) "$it seconds remaining" else "Waiting time elapsed!"
-//                                        } ?: "--"
-//
-//                                        Text(
-//                                            timeLeftText,
-//                                            style = TextStyle(fontSize = 16.sp, fontWeight = FontWeight.W600)
-//                                        )
-//                                        Text("Waiting time", style = TextStyle(fontSize = 12.sp))
-//                                    }
+                                    CountdownTimer(totalTime = 120)
                                 }
 
                                 //
