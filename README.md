@@ -2,8 +2,9 @@ APK File Link (Downloadable): https://drive.google.com/file/d/1AqmQuzprJN2wHNjOF
 
 Build Instructions:
 1. Clone the repository
-2. Sync the Gradle
-3. Connect you device and run the app
+2. Add you valid Google API Key
+3. Sync the Gradle
+4. Connect you device and run the app
 
 App Instructions:
 1. Launch the app
