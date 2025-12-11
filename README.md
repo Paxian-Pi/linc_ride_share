@@ -13,3 +13,10 @@ App Instructions:
 5. Now slide right to begin "pickup to destination" simulation
 6. Wait for simulation to finish (App automatically routes to the "TripEnded" screen)
 7. Click on close button on the to left corner of the screen to reset
+
+The MVVM architecture was used for the following reasons:
+1. Clear Separation of Concerns
+2. Great for Reactive & Declarative UI Frameworks
+3. Reusability of Logic
+4. Better Scalability
+5. Cleaner, More Maintainable Codebase
