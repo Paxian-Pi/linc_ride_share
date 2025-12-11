@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/ride_sharing/linc/model/ExampleModel.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/ride_sharing/linc/model/ExampleModel.kt" />
+              <option name="updatedContent" value="package com.ride_sharing.linc.model&#10;&#10;// Example data class for MVVM structure&#10;&#10;data class ExampleModel(val id: Int, val name: String)&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/ride_sharing/linc/navigation/ExampleNavigation.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/ride_sharing/linc/navigation/ExampleNavigation.kt" />
+              <option name="updatedContent" value="package com.ride_sharing.linc.navigation&#10;&#10;// Example navigation file for MVVM structure&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/ride_sharing/linc/repository/ExampleRepository.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/ride_sharing/linc/repository/ExampleRepository.kt" />
+              <option name="updatedContent" value="package com.ride_sharing.linc.repository&#10;&#10;class ExampleRepository {&#10;    // Example repository for MVVM structure&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/ride_sharing/linc/view/ExampleScreen.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/ride_sharing/linc/view/ExampleScreen.kt" />
+              <option name="updatedContent" value="package com.ride_sharing.linc.view&#10;&#10;import androidx.compose.runtime.Composable&#10;&#10;@Composable&#10;fun ExampleScreen() {&#10;    // Example Composable for MVVM structure&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/ride_sharing/linc/viewmodel/ExampleViewModel.kt">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/app/src/main/java/com/ride_sharing/linc/viewmodel/ExampleViewModel.kt" />
+              <option name="updatedContent" value="package com.ride_sharing.linc.viewmodel&#10;&#10;import androidx.lifecycle.ViewModel&#10;&#10;class ExampleViewModel : ViewModel() {&#10;    // Example ViewModel for MVVM structure&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
