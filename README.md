@@ -1,4 +1,4 @@
-APK File Link: https://drive.google.com/file/d/1AqmQuzprJN2wHNjOFa1pEaCiiElihBK6/view?usp=sharing
+APK File Link (Downloadable): https://drive.google.com/file/d/1AqmQuzprJN2wHNjOFa1pEaCiiElihBK6/view?usp=sharing
 
 Build Instructions:
 1. Clone the repository
