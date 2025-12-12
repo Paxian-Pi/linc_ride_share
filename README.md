@@ -2,7 +2,7 @@ APK File Link (downloadable demo): https://drive.google.com/file/d/1AqmQuzprJN2w
 
 Build Instructions:
 1. Clone the repository
-2. Add you valid Google API Key to the Androidmanifest.xml and at line 196 of the GoogleMapView.kt file
+2. Add you valid Google API Key to the Androidmanifest.xml and the GoogleMapView.kt file
 3. #2 above is very important otherwise you won't see the routing screens come to play
 4. Sync the Gradle
 5. Connect you device and run the app
