@@ -1,9 +1,11 @@
-APK File Link (Downloadable): https://drive.google.com/file/d/1AqmQuzprJN2wHNjOFa1pEaCiiElihBK6/view?usp=sharing
+APK File Link (downloadable demo): https://drive.google.com/file/d/1AqmQuzprJN2wHNjOFa1pEaCiiElihBK6/view?usp=sharing
 
 Build Instructions:
 1. Clone the repository
-2. Sync the Gradle
-3. Connect you device and run the app
+2. Add you valid Google API Key to the Androidmanifest.xml and the GoogleMapView.kt file
+3. #2 above is very important otherwise you won't see the routing screens come to play
+4. Sync the Gradle
+5. Connect you device and run the app
 
 App Instructions:
 1. Launch the app
