@@ -337,7 +337,7 @@ fun GetToPickupScreen(
                                                             shape = RoundedCornerShape(8.dp)
                                                         )
                                                 ) {
-                                                    Log.d("ETA", "${rideViewModel.eta.collectAsState().value}")
+                                                    Log.d("ETA", rideViewModel.eta.collectAsState().value)
 
                                                     Text(
                                                         "ETA  \u2022  ${rideViewModel.eta.collectAsState().value}",

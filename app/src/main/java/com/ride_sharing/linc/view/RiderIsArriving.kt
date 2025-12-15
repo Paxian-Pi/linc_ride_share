@@ -1,5 +1,6 @@
 package com.ride_sharing.linc.view
 
+import android.util.Log
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.tween
@@ -39,7 +40,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -53,12 +56,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.asLiveData
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import androidx.wear.compose.material3.Icon
 import com.ride_sharing.linc.components.GoogleMapView
 import com.ride_sharing.linc.utils.AssetImage
 import com.ride_sharing.linc.utils.EmergencyWidget
+import com.ride_sharing.linc.utils.formatTime
 import com.ride_sharing.linc.viewmodel.TimerViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -67,10 +72,12 @@ import kotlin.math.roundToInt
 @Composable
 fun RiderIsArrivingScreen(
     navController: NavController = rememberNavController(),
-    timerViewModel: TimerViewModel? = null
+    timerViewModel: TimerViewModel
 ) {
     val showBox = remember { mutableStateOf(true) }
     val coroutineScope = rememberCoroutineScope()
+
+    timerViewModel.startTimer(totalTime = 120)
 
     Scaffold { innerPadding ->
         Box(
@@ -168,7 +175,15 @@ fun RiderIsArrivingScreen(
                                         style = TextStyle(fontSize = 19.sp, fontWeight = FontWeight.W500)
                                     )
                                     
-                                    CountdownTimer(totalTime = 120)
+                                    // CountdownTimer(totalTime = 120)
+                                    
+                                    val timeLeft = timerViewModel.timeLeft.collectAsState().value
+                                    Log.d("TimeLeft", "$timeLeft")
+                                    
+                                    Column(horizontalAlignment = Alignment.End) {
+                                        Text(formatTime(timeLeft), style = TextStyle(fontSize = 16.sp, fontWeight = FontWeight.W600))
+                                        Text(if(timeLeft == 0) "Waiting time elapsed" else "Waiting time", style = TextStyle(fontSize = 12.sp))
+                                    }
                                 }
 
                                 //
@@ -363,12 +378,12 @@ fun CountdownTimer(
     totalTime: Int = 30,
     onFinished: () -> Unit = {}
 ) {
-    var timeLeft by remember { mutableStateOf(totalTime) }
-    fun formatTime(seconds: Int): String {
-        val m = seconds / 60
-        val s = seconds % 60
-        return String.format("%02d:%02d", m, s)
-    }
+    var timeLeft by remember { mutableIntStateOf(totalTime) }
+//    fun formatTime(seconds: Int): String {
+//        val m = seconds / 60
+//        val s = seconds % 60
+//        return String.format("%02d:%02d", m, s)
+//    }
 
     LaunchedEffect(timeLeft) {
         if (timeLeft > 0) {

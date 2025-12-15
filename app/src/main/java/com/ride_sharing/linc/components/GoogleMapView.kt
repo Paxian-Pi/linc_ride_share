@@ -3,6 +3,7 @@ package com.ride_sharing.linc.components
 import android.graphics.Bitmap.createScaledBitmap
 import android.graphics.BitmapFactory
 import android.location.Location
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -39,6 +40,7 @@ import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.MarkerState
 import com.google.maps.android.compose.Polyline
 import com.google.maps.android.compose.rememberCameraPositionState
+import com.ride_sharing.linc.BuildConfig
 import com.ride_sharing.linc.viewmodel.RideViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -193,9 +195,11 @@ fun GoogleMapView(
 }
 
 suspend fun fetchRoute(origin: LatLng, destination: LatLng): List<LatLng> {
-    val apiKey = "YOU_API_KEY_HERE"
+    val apiKey = BuildConfig.MAPS_API_KEY
     val url =
         "https://maps.googleapis.com/maps/api/directions/json?origin=${origin.latitude},${origin.longitude}&destination=${destination.latitude},${destination.longitude}&key=$apiKey"
+
+    Log.d("API_KEY_CHECK", "API KEY: ${BuildConfig.MAPS_API_KEY}")
 
     return withContext(Dispatchers.IO) {
         val client = OkHttpClient()
