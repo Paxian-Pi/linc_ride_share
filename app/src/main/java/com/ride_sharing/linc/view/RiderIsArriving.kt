@@ -77,7 +77,7 @@ fun RiderIsArrivingScreen(
     val showBox = remember { mutableStateOf(true) }
     val coroutineScope = rememberCoroutineScope()
 
-    timerViewModel.startTimer(totalTime = 120)
+    timerViewModel.startTimer(120)
 
     Scaffold { innerPadding ->
         Box(
@@ -174,6 +174,7 @@ fun RiderIsArrivingScreen(
                                         "Rider is arriving...",
                                         style = TextStyle(fontSize = 19.sp, fontWeight = FontWeight.W500)
                                     )
+                                    
                                     
                                     // CountdownTimer(totalTime = 120)
                                     
@@ -432,15 +433,15 @@ fun Swipeable(navController: NavController) {
         contentAlignment = Alignment.Center
     ) {
         if (dragOffset.value < maxPx / 2) {
-            swipeableText(text = "Picked up", isSwiped = false)
+            SwipeableText(text = "Picked up", isSwiped = false)
         } else {
-            swipeableText(text = "Routing to destination", isSwiped = true)
+            SwipeableText(text = "Routing to destination", isSwiped = true)
         }
     }
 }
 
 @Composable
-fun swipeableText(text: String, isSwiped: Boolean) {
+fun SwipeableText(text: String, isSwiped: Boolean) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
