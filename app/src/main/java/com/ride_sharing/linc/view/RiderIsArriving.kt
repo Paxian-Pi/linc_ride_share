@@ -380,11 +380,6 @@ fun CountdownTimer(
     onFinished: () -> Unit = {}
 ) {
     var timeLeft by remember { mutableIntStateOf(totalTime) }
-//    fun formatTime(seconds: Int): String {
-//        val m = seconds / 60
-//        val s = seconds % 60
-//        return String.format("%02d:%02d", m, s)
-//    }
 
     LaunchedEffect(timeLeft) {
         if (timeLeft > 0) {

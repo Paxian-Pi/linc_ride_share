@@ -49,6 +49,7 @@ import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
+import androidx.core.graphics.scale
 
 @Composable
 //fun GoogleMapView(onMapTap: () -> Unit, toPickup: Boolean = false, onEtaUpdate: (String) -> Unit) {
@@ -73,12 +74,14 @@ fun GoogleMapView(
             if (toPickup || isPickup) context.assets.open("routing_car.png").use { BitmapFactory.decodeStream(it) }
             else context.assets.open("driver_marker.png").use { BitmapFactory.decodeStream(it) }
 
-        createScaledBitmap(
-            originalBitmap,
-            (originalBitmap.width * 0.7).toInt(),
-            (originalBitmap.height * 0.7).toInt(),
-            true
-        )
+        originalBitmap.scale((originalBitmap.width * 0.7).toInt(), (originalBitmap.height * 0.7).toInt())
+
+//        createScaledBitmap(
+//            originalBitmap,
+//            (originalBitmap.width * 0.7).toInt(),
+//            (originalBitmap.height * 0.7).toInt(),
+//            true
+//        )
     }
 
     val markerState = remember { MarkerState(driverLocation.value) }
@@ -90,7 +93,7 @@ fun GoogleMapView(
         if (toPickup || isPickup) {
             coroutineScope.launch {
                 val route = if (toPickup) fetchRoute(driverLocation.value, pickupLocation) else fetchRoute(
-                    driverLocation.value,
+                    pickupLocation,
                     destinationLocation
                 )
                 routePoints.value = route
